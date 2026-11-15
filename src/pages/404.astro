@@ -1,0 +1,58 @@
+---
+const home = "/";
+const title = "Page not found — Voxletra";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="theme-color" content="#101a1b" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="masthead">
+      <a href={home} class="brand" aria-label="Voxletra home"><span aria-hidden="true">VX/VOICE</span> Voxletra</a>
+      <nav aria-label="Primary navigation">
+        <a href={home}>Home</a>
+        <a href="https://github.com/voxletra">GitHub</a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <p class="eyebrow">404 / ROUTE NOT FOUND</p>
+      <h1>That page isn’t here.</h1>
+      <p class="explanation">The address may have changed, or the link may be incorrect. You can return to Voxletra’s home page to continue.</p>
+      <a class="primary" href={home}>Return to Voxletra home <span aria-hidden="true">↗</span></a>
+    </main>
+    <footer>
+      <span>Voxletra / speech systems, kept explicit</span>
+      <a href="https://github.com/voxletra">Explore the organization</a>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(html) { background: #101a1b; color: #eef5ef; font-family: system-ui, -apple-system, sans-serif; }
+  :global(body) { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+  :global(a) { color: inherit; }
+  :global(a:focus-visible) { outline: 3px solid #e4a853; outline-offset: 5px; }
+  .skip-link { position: absolute; top: -5rem; left: 1rem; padding: .75rem 1rem; background: #e4a853; color: #101a1b; z-index: 2; }
+  .skip-link:focus { top: 1rem; }
+  .masthead { display: flex; gap: 1.5rem; justify-content: space-between; align-items: center; padding: 1.5rem clamp(1.25rem, 4vw, 4rem); border-bottom: 1px solid #2d4140; }
+  .brand { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; font-weight: 700; text-decoration: none; }
+  .brand span, .eyebrow, footer { font-family: ui-monospace, monospace; font-size: .75rem; letter-spacing: .07em; }
+  .brand span, .eyebrow { color: #e4a853; }
+  nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+  nav a, footer a { text-underline-offset: .35rem; }
+  main { flex: 1; max-width: 55rem; padding: clamp(5rem, 12vh, 10rem) clamp(1.25rem, 4vw, 4rem); }
+  h1 { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.045em; line-height: 1.05; font-size: clamp(3rem, 9vw, 6.75rem); margin: 1rem 0 2rem; }
+  .explanation { max-width: 38rem; color: #c5d1cb; font-size: clamp(1.05rem, 2.4vw, 1.3rem); line-height: 1.65; }
+  .primary { display: inline-flex; gap: 1rem; align-items: center; margin-top: 1.5rem; background: #e4a853; color: #101a1b; padding: 1rem 1.4rem; border-radius: .15rem; text-decoration: none; font-weight: 700; }
+  .primary:hover { background: #f4c578; }
+  footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 1.5rem clamp(1.25rem, 4vw, 4rem); color: #c5d1cb; border-top: 1px solid #2d4140; }
+  @media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
+</style>
